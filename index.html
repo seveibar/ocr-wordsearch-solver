@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OCR Wordsearch Solver</title>
+
+    <script src="twitter_bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Le styles -->
+    <link href="twitter_bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>OCR Wordsearch Solver</h1>
+        <br/><p>Paste the data from an OCR below or click an example.</p>
+        <a href='#' style='margin-right:20px' id='ex1'>Simple</a>
+        <a href='#' style='margin-right:20px' id='ex2'>Errors</a>
+        <a href='#' id='ex3'>Complex</a>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h4>Wordsearch Data</h4>
+          <textarea class='span4' placeholder='Wordsearch characters, each row is a new line' id='text_input'></textarea>
+        </div>
+        <div class="span4">
+          <h4>Words</h4>
+          <textarea class='span4' placeholder='Words, each word on a new line or seperated with a space' id='word_input'>cat
+rat</textarea>
+       </div>
+        <div class="span4">
+          <h4>Parameters</h4>
+          Number of errors allowed <select placeholder='' id='error_max' value='1'>
+          <option id='error_max_0' value='0'>0</option>
+          <option id='error_max_1' value='1' selected>1</option>
+          <option id='error_max_2' value='2'>2</option>
+          <option id='error_max_3' value='3'>3</option>
+          <option id='error_max_4' value='4'>4</option>
+          </select>
+          <button class='btn btn-success' id='go'>Go</button>
+        </div>
+      </div>
+      
+      <div class="hero-unit">
+        <canvas id='canvas' width='800' height='600'></canvas>
+      </div>
+      
+    </div> <!-- /container -->
+    
+    <script type="application/dart" src="wordsearch_solver.dart"></script>
+    <script src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
+    
+  </body>
+</html>
