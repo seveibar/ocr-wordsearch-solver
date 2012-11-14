@@ -1,7 +1,6 @@
 
-#import('dart:html');
-#import('dart:math');
-#import('dart:isolate');
+import 'dart:html';
+import 'dart:math';
 
 int sizeX,sizeY;
 int errorMax = 1;
